@@ -15,18 +15,7 @@ if [[ $RAD_ERRORS -ne 0 ]]
 then
     echo 'Ha fallado el análisis estatico de RADON - MI'
     exit 1
-    
-if [[ $RAD_ERRORS -ne 1 ]]
-then
-    echo 'Ha fallado el análisis estatico de RADON - SRC'
-    exit 1
-fi
-RAD_ERRORS=$(radon mi src -nc | wc -l)
-if [[ $RAD_ERRORS -ne 0 ]]
-then
-    echo 'Ha fallado el análisis estatico de RADON - SRC'
-    exit 1
-    
+
 fi
 
 flake8 src/*.py
