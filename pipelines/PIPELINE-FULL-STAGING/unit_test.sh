@@ -10,5 +10,6 @@ python test/integration/todoApiTest.py
 pip show coverage
 coverage run --include=src/todoList.py test/unit/TestToDo.py
 coverage report -m
+--cov-report term-missing
 coverage xml
 coverage html
