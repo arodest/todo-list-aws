@@ -30,8 +30,8 @@ def get_item(key, dynamodb=None):
             }
         )
 
-    except ClientError as e: # pragma: no cover
-        print(e.response['Error']['Message']) # pragma: no cover
+    except ClientError as e:#pragma: no cover
+        print(e.response['Error']['Message'])#pragma: no cover
     else:
         print('Result getItem:'+str(result))
         if 'Item' in result:
